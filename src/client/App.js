@@ -1,30 +1,45 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-unused-state */
 /* eslint-disable space-before-function-paren */
 import React, { Component } from 'react';
 import Layout from './components/Layout/Layout';
 import Classes from './app.css';
 import ContactForm from './components/contactForm/contactform';
-import Output from './components/Output/output';
 
 export default class App extends Component {
   state = {
-    username: 'ty'
+    username: null,
+    contactName: null,
+    company: null,
+    reffer: null,
+    message: 'fuck'
   }
 
   componentDidMount () {
     fetch('/api/getUsername')
       .then(res => res.json())
       .then(user => this.setState({
-        username: user.username
+        username: user.username.toUpperCase()
       }));
-    console.log(Classes);
+  }
+
+  messageHandler = (mesArg) => {
+    console.log(mesArg);
+    this.setState({
+      message: mesArg.toString()
+    });
   }
 
   render() {
     return (
       <Layout>
-        <ContactForm />
-        <Output />
+        <h1>
+          Hello
+          {' '}
+          <br />
+          {this.state.username}
+        </h1>
+        <ContactForm message={this.state.message} messageHandler={this.messageHandler} />
       </Layout>
     );
   }

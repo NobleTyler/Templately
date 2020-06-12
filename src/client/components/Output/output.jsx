@@ -1,13 +1,12 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 const output = props => (
-  props ={
-    show:false
-  }
-  <React.Fragment show={props.show}>
-    <input
-      type="text"
-    />
+  <React.Fragment>
+    <output type="text">
+      {props.message}
+    </output>
   </React.Fragment>
 );
 
