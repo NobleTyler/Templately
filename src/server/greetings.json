@@ -1,26 +1,10 @@
 { 
-    "noRefferNoType":{
-    "name": "Bill James",
-    "company": "yes",
-    "refferer": null,
-    "message": "no refferal no type"
-},
-    "noRefferCEO":{
-    "name": "Bill James",
-    "company": "yes",
-    "refferer": null,
-    "message": "You're a CEO and nobody is reffering me"
-}, 
-"noRefferRecruiter":{
-    "name": "Bill James",
-    "company": "yes",
-    "refferer": null,
-    "message": "Youre a manager and I have no refferal"
-},
- "noReffer":{
-    "name": "Bill James",
-    "company": "yes",
-    "refferer": null,
-    "message": ""
-}
+    "ceoNoReffer":"Hi I'm a Ceo with no reffer for ${company} and I like you because I am ${contactName}",
+
+    "ceoWithReffer":"With a referal whos name is ${reffer}",
+    "recruiterNoReffer":"I'm a recruiter with no reffer",
+    "recruiterWithReffer":"",
+    "friendNoReffer":"",
+    "friendWithReffer":"" 
+    
 }

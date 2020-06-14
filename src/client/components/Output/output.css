@@ -1,4 +1,6 @@
-label{
+.Output{
+    padding: 5px;
+    border: 1px black;
     color: white;
     font-style: bold;
     font-size: large;

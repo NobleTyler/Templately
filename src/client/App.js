@@ -12,7 +12,7 @@ export default class App extends Component {
     contactName: null,
     company: null,
     reffer: null,
-    message: 'fuck'
+    message: null,
   }
 
   componentDidMount () {
@@ -24,7 +24,6 @@ export default class App extends Component {
   }
 
   messageHandler = (mesArg) => {
-    console.log(mesArg);
     this.setState({
       message: mesArg.toString()
     });
@@ -32,14 +31,13 @@ export default class App extends Component {
 
   render() {
     return (
-      <Layout>
+      <Layout style={Classes.body}>
         <h1>
           Hello
-          {' '}
           <br />
           {this.state.username}
         </h1>
-        <ContactForm message={this.state.message} messageHandler={this.messageHandler} />
+        <ContactForm />
       </Layout>
     );
   }
